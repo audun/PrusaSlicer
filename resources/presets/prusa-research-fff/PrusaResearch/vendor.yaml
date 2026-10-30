@@ -52,6 +52,9 @@ features:
       default: false
     multi_extruder:
       default: false
+    quick_start:
+      default: false
+      user_editable: false
   tool:
     nozzle_high_flow:
       default: false
@@ -76,6 +79,7 @@ printer_families:
     base_model: COREONE
     printer_configs_order:
       - c1
+      - c1quick
       - c1mmu3
       - c1l
       - c1lmmu3
@@ -908,6 +912,16 @@ legacy_printer_model: [COREONE]
 tools:
 - tool: 0.4HF
 sheet: satin
+---
+kind: printer_config
+id: c1quick
+name: Prusa CORE One (quick start)
+printer: COREONE
+tools:
+- tool: 0.4HF
+sheet: satin
+features:
+  quick_start: true
 ---
 kind: printer_config
 id: c1oak
